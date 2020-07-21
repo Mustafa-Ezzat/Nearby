@@ -37,6 +37,10 @@
 		D676749B24C5F1C100B47CF2 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676749A24C5F1C100B47CF2 /* RoundedView.swift */; };
 		D67674A124C5F41B00B47CF2 /* EmptyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674A024C5F41B00B47CF2 /* EmptyDataSource.swift */; };
 		D67674A324C6517A00B47CF2 /* PlacesSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674A224C6517A00B47CF2 /* PlacesSyncManager.swift */; };
+		D67674AA24C6D8D000B47CF2 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D67674A624C6D8D000B47CF2 /* SF-Pro-Display-Regular.otf */; };
+		D67674AB24C6D8D000B47CF2 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D67674A724C6D8D000B47CF2 /* SF-Pro-Display-Bold.otf */; };
+		D67674AC24C6D8D000B47CF2 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D67674A824C6D8D000B47CF2 /* SF-Pro-Display-Medium.otf */; };
+		D67674AD24C6D8D000B47CF2 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D67674A924C6D8D000B47CF2 /* SF-Pro-Display-Semibold.otf */; };
 		D6AD848B24C1267000AF872C /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD848824C1267000AF872C /* Responsable.swift */; };
 		D6AD848C24C1267000AF872C /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD848A24C1267000AF872C /* ReusableView.swift */; };
 		D6AD849724C126DE00AF872C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD848E24C126DE00AF872C /* UIImageView+Extension.swift */; };
@@ -117,6 +121,10 @@
 		D676749A24C5F1C100B47CF2 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		D67674A024C5F41B00B47CF2 /* EmptyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataSource.swift; sourceTree = "<group>"; };
 		D67674A224C6517A00B47CF2 /* PlacesSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSyncManager.swift; sourceTree = "<group>"; };
+		D67674A624C6D8D000B47CF2 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		D67674A724C6D8D000B47CF2 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		D67674A824C6D8D000B47CF2 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		D67674A924C6D8D000B47CF2 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		D6AD848824C1267000AF872C /* Responsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responsable.swift; sourceTree = "<group>"; };
 		D6AD848A24C1267000AF872C /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D6AD848E24C126DE00AF872C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -213,6 +221,7 @@
 		D659609F24C0946A005A2D86 /* Nearby */ = {
 			isa = PBXGroup;
 			children = (
+				D67674A424C6D8D000B47CF2 /* Resources */,
 				D676749924C5F1AF00B47CF2 /* Helpers */,
 				D6AD848D24C126DE00AF872C /* Extensions */,
 				D6AD84AD24C1329300AF872C /* AppConstant */,
@@ -406,6 +415,25 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		D67674A424C6D8D000B47CF2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D67674A524C6D8D000B47CF2 /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D67674A524C6D8D000B47CF2 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				D67674A624C6D8D000B47CF2 /* SF-Pro-Display-Regular.otf */,
+				D67674A724C6D8D000B47CF2 /* SF-Pro-Display-Bold.otf */,
+				D67674A824C6D8D000B47CF2 /* SF-Pro-Display-Medium.otf */,
+				D67674A924C6D8D000B47CF2 /* SF-Pro-Display-Semibold.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		D6AD848624C1267000AF872C /* Generic */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,9 +618,13 @@
 			files = (
 				D676747524C3A43300B47CF2 /* ExploreViewController.xib in Resources */,
 				D676749224C5F0D100B47CF2 /* EmptyCell.xib in Resources */,
+				D67674AD24C6D8D000B47CF2 /* SF-Pro-Display-Semibold.otf in Resources */,
 				D65960AD24C0946D005A2D86 /* LaunchScreen.storyboard in Resources */,
 				D676749724C5F10700B47CF2 /* PlaceCell.xib in Resources */,
 				D65960AA24C0946D005A2D86 /* Assets.xcassets in Resources */,
+				D67674AA24C6D8D000B47CF2 /* SF-Pro-Display-Regular.otf in Resources */,
+				D67674AC24C6D8D000B47CF2 /* SF-Pro-Display-Medium.otf in Resources */,
+				D67674AB24C6D8D000B47CF2 /* SF-Pro-Display-Bold.otf in Resources */,
 				D676746D24C39E5500B47CF2 /* LaunchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

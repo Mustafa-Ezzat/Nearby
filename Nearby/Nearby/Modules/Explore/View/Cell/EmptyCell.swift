@@ -1,9 +1,9 @@
 //
 //  EmptyCell.swift
-//  Movielix
+//  Nearby
 //
-//  Created by Mustafa Ezzat on 5/12/20.
-//  Copyright © 2020 Swvl. All rights reserved.
+//  Created by Mustafa Ezzat on 7/20/20.
+//  Copyright © 2020 foursquare. All rights reserved.
 //
 
 import UIKit
