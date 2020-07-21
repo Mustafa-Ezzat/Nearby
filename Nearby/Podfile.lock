@@ -1,16 +1,20 @@
 PODS:
   - FoursquareAPIClient (5.0.1)
+  - Nuke (7.5.2)
 
 DEPENDENCIES:
   - FoursquareAPIClient
+  - Nuke
 
 SPEC REPOS:
   trunk:
     - FoursquareAPIClient
+    - Nuke
 
 SPEC CHECKSUMS:
   FoursquareAPIClient: 83c932298e905634e0c0cce90e3f1d6897c7a7a9
+  Nuke: 0350d346a688426e8f2331253ef28dc2fc4f6178
 
-PODFILE CHECKSUM: 56a33e45b7a007421e85abda4e48343bf2df66bb
+PODFILE CHECKSUM: 48caa55cb2b0fe6cf228312b47e6a3e1328bcb02
 
 COCOAPODS: 1.9.3
