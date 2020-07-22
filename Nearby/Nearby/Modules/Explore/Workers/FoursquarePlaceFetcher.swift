@@ -36,7 +36,13 @@ class FoursquarePlaceFetcher: PlaceFetcher {
                           }
                       }
                   case let .failure(error):
-                      completionHandler(.failure(error))
+                    switch error {
+                    case .connectionError:
+                        // try to read from cashed
+                        completionHandler(.failure(error))
+                    default:
+                        completionHandler(.failure(error))
+                    }
                   }
               }
     }

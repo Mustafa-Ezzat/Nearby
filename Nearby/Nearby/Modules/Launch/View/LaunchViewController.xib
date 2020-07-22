@@ -31,7 +31,7 @@
                     <rect key="frame" x="8" y="671" width="398" height="199"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kw-xQ-2tw">
-                            <rect key="frame" x="161.5" y="91" width="75" height="17"/>
+                            <rect key="frame" x="165" y="91" width="68.5" height="17"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="17" id="qQg-zX-sTo"/>
                             </constraints>
@@ -40,7 +40,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cognitev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00J-ne-09G">
-                            <rect key="frame" x="139" y="116" width="120" height="35"/>
+                            <rect key="frame" x="137" y="116" width="124" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="yCp-uN-fL7"/>
                             </constraints>

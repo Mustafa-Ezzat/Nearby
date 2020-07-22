@@ -44,12 +44,15 @@ extension ExploreDatasource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let view = view, view.hasMorePlaces else {
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .clear
+       return view
+    }
+    func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        guard let view = self.view, view.hasMorePlaces else {
             return
         }
-        if indexPath.row == list.count - 1 {
-            view.fetchPlaces()
-        }
+        view.fetchPlaces()
     }
 }

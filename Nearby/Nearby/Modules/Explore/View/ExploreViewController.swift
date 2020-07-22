@@ -12,29 +12,34 @@ typealias ExploreViewInput = ExploreViewProtocol & BaseViewProtocol
 
 protocol ExploreViewProtocol: class {
     func display(list: [Place])
+    func display(cashedPlaces: [Place])
 }
 
-class ExploreViewController: BaseViewController {
-    @IBOutlet weak var placeTableView: UITableView!
-    var activityIndicator: UIActivityIndicatorView!
+class ExploreViewController: FooterLoaderViewController {
     var modeButton: UIBarButtonItem!
     var exploreDatasource: ExploreDatasource!
-    var emptyDataSource: EmptyDataSource!
     var interactor: ExploreInteractorInput?
     var location: LocationCoordinate!
     var hasMorePlaces: Bool!
     var isRealTime: Bool!
+    var offset: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         handleNavigationBar()
         configurePlaceTableView()
-        LocationManager.shared.delegate = self
+        synceLoacationUpdates()
     }
     func fetchPlaces() {
-        if !exploreDatasource.list.isEmpty { activityIndicator.startAnimating() }
-        interactor?.fetchPlaces(with: location, offset: exploreDatasource.list.count)
+        guard let location = self.location, let interactor = self.interactor else {
+            return
+        }
+        startLoading()
+        interactor.fetchPlaces(with: location, offset: offset)
+    }
+    func synceLoacationUpdates() {
+        LocationManager.shared.delegate = self
     }
     func handleNavigationBar() {
         showNavigation()
@@ -54,33 +59,25 @@ class ExploreViewController: BaseViewController {
         modeButton.title = PlacesSyncManager.shared.isRealTime ? "Realtime" : "Single update"
     }
     func configurePlaceTableView() {
-        emptyDataSource = EmptyDataSource()
-        placeTableView.register(cell: PlaceCell.self)
-        placeTableView.register(cell: EmptyCell.self)
-        activityIndicator = UIActivityIndicatorView()
-        placeTableView.tableFooterView = activityIndicator
+        super.configurePlaceTableView(cellTypes: [PlaceCell.self, EmptyCell.self])
         resetDataSource()
     }
     func resetDataSource() {
+        offset = 0
         hasMorePlaces = true
         exploreDatasource = ExploreDatasource(list: [], view: self)
         handleDatasource(exploreDatasource)
     }
-    func handleDatasource(_ dataSource: TableViewDelegates) {
-        self.placeTableView.dataSource = dataSource
-        self.placeTableView.delegate = dataSource
-    }
-    func handleError(with message: String) {
-        emptyDataSource.message = message
-        handleDatasource(emptyDataSource)
-        reloadTableView()
-    }
-    func reloadTableView() {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.placeTableView.reloadData()
-            self.activityIndicator.stopAnimating()
+    func filterUniquePlaces() -> [Place] {
+        guard let list = exploreDatasource?.list, !list.isEmpty else {
+            return []
         }
+        let uniqueList = Set<Place>(list)
+        return Array(uniqueList)
+    }
+    override func startLoading() {
+        guard offset > 0 else { return }
+        super.startLoading()
     }
 }
 
@@ -100,18 +97,23 @@ extension ExploreViewController: ExploreViewProtocol {
         if list.count < FourSquare.Explore.limit {
             hasMorePlaces = false
         }
+        // offset: fetch places starting from
+        offset += list.count
         exploreDatasource?.list.append(contentsOf: list)
-        guard let places = exploreDatasource?.list, !places.isEmpty else {
-            handleError(with: "No places found")
-            return
-        }
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.handleDatasource(self.exploreDatasource)
-            self.reloadTableView()
-        }
+        // view unique places
+        exploreDatasource?.list = filterUniquePlaces()
+        // cache last viewed places
+        interactor?.cachePlaces(list: exploreDatasource?.list ?? [])
+        handleDatasource(exploreDatasource)
+        reloadTableView()
+    }
+    func display(cashedPlaces: [Place]) {
+        hasMorePlaces = false
+        exploreDatasource?.list = cashedPlaces
+        handleDatasource(exploreDatasource)
+        reloadTableView()
     }
     override func display(error: String) {
-        handleError(with: "Something went wrong")
+        handleEmptyDataSource(with: error)
     }
 }

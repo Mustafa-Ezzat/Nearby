@@ -7,7 +7,6 @@
 //
 
 import UIKit
-typealias TableViewDelegates = UITableViewDataSource & UITableViewDelegate
 class EmptyDataSource: NSObject, TableViewDelegates {
     var message: String!
     func numberOfSections(in tableView: UITableView) -> Int {

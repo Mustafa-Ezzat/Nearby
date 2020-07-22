@@ -14,7 +14,8 @@ enum FourSquare {
     enum Explore {
         static let endPoint = "venues/explore"
         static let radiusValue = 1000
-        static let limit = 10
+        static let limit = 13
+        static let timeout = 7
         enum Params {
             static let ll = "ll"
             static let radius = "radius"

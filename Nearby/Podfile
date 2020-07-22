@@ -8,6 +8,7 @@ target 'Nearby' do
   # Pods for Nearby
   pod 'FoursquareAPIClient'
   pod 'Nuke'
+  pod 'Unrealm'
 
   target 'NearbyTests' do
     inherit! :search_paths

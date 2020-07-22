@@ -11,26 +11,34 @@ import Foundation
 typealias ExplorePresenterInput = ExplorePresenterProtocol & BasePresenterProtocol
 
 protocol ExplorePresenterProtocol {
-    func present(list: [Venue])
+    func present(list: [Place])
+    func present(cashedPlaces: [Place])
 }
 
 class ExplorePresenter {
     weak var view: ExploreViewInput?
+    
+    private func isEmptyPlaces(list: [Place]) -> Bool {
+        guard list.count > 0 else {
+            view?.display(error: "no places found")
+            return true
+        }
+        return false
+    }
 }
 
 extension ExplorePresenter: ExplorePresenterProtocol {
-    func present(list: [Venue]) {
-        guard list.count > 0 else {
-            view?.display(error: "no places found")
-            return
-        }
-        let placeList = list.map { Place(venuId: $0.venueId, name: $0.name, address: $0.location.address ?? "", photo: $0.photo ?? "") }
-        view?.display(list: placeList)
+    func present(list: [Place]) {
+        guard !isEmptyPlaces(list: list) else { return }
+        view?.display(list: list)
+    }
+    func present(cashedPlaces: [Place]) {
+        guard !isEmptyPlaces(list: cashedPlaces) else { return }
+        view?.display(cashedPlaces: cashedPlaces)
     }
 }
 extension ExplorePresenter: BasePresenterProtocol {
     func present(error: Error) {
-        view?.display(error: "something went wrong")
+        view?.display(error: "Something went wrong")
     }
 }
-

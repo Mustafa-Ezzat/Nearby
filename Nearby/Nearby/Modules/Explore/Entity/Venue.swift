@@ -12,15 +12,14 @@ struct Venue: Codable {
     let venueId: String
     let name: String
     let location: Location
-    let photo: String?
     private enum CodingKeys: String, CodingKey {
         case venueId = "id"
         case name
         case location
-        case photo
     }
 }
 
+// The following models to decode the explore endpoint response JSON
 struct Item: Codable {
     let venue: Venue
 }
@@ -38,3 +37,5 @@ struct ExploreResponsable: Responsable {
     static let shared = ExploreResponsable()
     private init() {}
 }
+
+

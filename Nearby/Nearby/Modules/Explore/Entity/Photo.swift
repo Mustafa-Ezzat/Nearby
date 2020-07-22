@@ -7,16 +7,14 @@
 //
 
 import Foundation
-
 struct PhotoItem: Codable {
     let prefix: String
     let suffix: String
 }
-
+// The following models to decode the photos endpoint response JSON
 struct PhotoItemList: Codable {
     let items: [PhotoItem]
 }
-
 struct PhotoList: Codable {
     let photos: PhotoItemList
 }
