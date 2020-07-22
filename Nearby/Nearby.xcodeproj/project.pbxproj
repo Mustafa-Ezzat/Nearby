@@ -44,6 +44,7 @@
 		D67674B124C74DFC00B47CF2 /* RealmWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674B024C74DFB00B47CF2 /* RealmWorker.swift */; };
 		D67674B324C74FD600B47CF2 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674B224C74FD600B47CF2 /* Dictionary+Extension.swift */; };
 		D67674B524C7CB1000B47CF2 /* FooterLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674B424C7CB1000B47CF2 /* FooterLoaderViewController.swift */; };
+		D67674B724C8F5CF00B47CF2 /* RealmWorkerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674B624C8F5CF00B47CF2 /* RealmWorkerTestCase.swift */; };
 		D6AD848B24C1267000AF872C /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD848824C1267000AF872C /* Responsable.swift */; };
 		D6AD848C24C1267000AF872C /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD848A24C1267000AF872C /* ReusableView.swift */; };
 		D6AD849724C126DE00AF872C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD848E24C126DE00AF872C /* UIImageView+Extension.swift */; };
@@ -131,6 +132,7 @@
 		D67674B024C74DFB00B47CF2 /* RealmWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmWorker.swift; sourceTree = "<group>"; };
 		D67674B224C74FD600B47CF2 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		D67674B424C7CB1000B47CF2 /* FooterLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterLoaderViewController.swift; sourceTree = "<group>"; };
+		D67674B624C8F5CF00B47CF2 /* RealmWorkerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmWorkerTestCase.swift; sourceTree = "<group>"; };
 		D6AD848824C1267000AF872C /* Responsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responsable.swift; sourceTree = "<group>"; };
 		D6AD848A24C1267000AF872C /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D6AD848E24C126DE00AF872C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			children = (
 				D65960B724C0946D005A2D86 /* NearbyTests.swift */,
 				D65960B924C0946D005A2D86 /* Info.plist */,
+				D67674B624C8F5CF00B47CF2 /* RealmWorkerTestCase.swift */,
 			);
 			path = NearbyTests;
 			sourceTree = "<group>";
@@ -810,6 +813,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D65960B824C0946D005A2D86 /* NearbyTests.swift in Sources */,
+				D67674B724C8F5CF00B47CF2 /* RealmWorkerTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
