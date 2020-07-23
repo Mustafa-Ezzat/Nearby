@@ -49,6 +49,7 @@ Search support prefix, infix, and postfix.
 Hints: I recommend using ssh in other situations
 
 ## Third parties
+- [Foursquare](https://cocoapods.org/pods/FoursquareAPIClient) Power location-based experience in your app.
 - [Nuke](https://github.com/kean/Nuke) is a powerful image loading and caching system
 - [Unrealm](https://github.com/arturdev/Unrealm) is powerful caching swift library written over RealmCocoa, which enables Swift native types to be saved in Realm.
 - [SwiftLint](https://github.com/realm/SwiftLint) is a tool to enforce Swift style and conventions.
