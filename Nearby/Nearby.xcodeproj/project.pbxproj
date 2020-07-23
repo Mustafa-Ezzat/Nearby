@@ -48,6 +48,7 @@
 		D67674BC24C90F3E00B47CF2 /* ExploreResponsableTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674BB24C90F3E00B47CF2 /* ExploreResponsableTestCase.swift */; };
 		D67674BE24C9179400B47CF2 /* PhotoListResponsableTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674BD24C9179400B47CF2 /* PhotoListResponsableTestCase.swift */; };
 		D67674C024C9185300B47CF2 /* PlacePhotoFetcherTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674BF24C9185300B47CF2 /* PlacePhotoFetcherTestCase.swift */; };
+		D67674C324C9F50400B47CF2 /* TestCaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674C224C9F50400B47CF2 /* TestCaseConstant.swift */; };
 		D6AD848B24C1267000AF872C /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD848824C1267000AF872C /* Responsable.swift */; };
 		D6AD848C24C1267000AF872C /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD848A24C1267000AF872C /* ReusableView.swift */; };
 		D6AD849724C126DE00AF872C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD848E24C126DE00AF872C /* UIImageView+Extension.swift */; };
@@ -139,6 +140,7 @@
 		D67674BB24C90F3E00B47CF2 /* ExploreResponsableTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreResponsableTestCase.swift; sourceTree = "<group>"; };
 		D67674BD24C9179400B47CF2 /* PhotoListResponsableTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListResponsableTestCase.swift; sourceTree = "<group>"; };
 		D67674BF24C9185300B47CF2 /* PlacePhotoFetcherTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePhotoFetcherTestCase.swift; sourceTree = "<group>"; };
+		D67674C224C9F50400B47CF2 /* TestCaseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCaseConstant.swift; sourceTree = "<group>"; };
 		D6AD848824C1267000AF872C /* Responsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responsable.swift; sourceTree = "<group>"; };
 		D6AD848A24C1267000AF872C /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D6AD848E24C126DE00AF872C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				D67674BD24C9179400B47CF2 /* PhotoListResponsableTestCase.swift */,
 				D67674B824C9068A00B47CF2 /* PlaceFetcherTestCase.swift */,
 				D67674BF24C9185300B47CF2 /* PlacePhotoFetcherTestCase.swift */,
+				D67674C224C9F50400B47CF2 /* TestCaseConstant.swift */,
 			);
 			path = NearbyTests;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				D659609A24C0946A005A2D86 /* Frameworks */,
 				D659609B24C0946A005A2D86 /* Resources */,
 				E37F5D8C4CA6559C767CB2B3 /* [CP] Embed Pods Frameworks */,
+				D67674C124C9F04D00B47CF2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -728,6 +732,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D67674C124C9F04D00B47CF2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		E37F5D8C4CA6559C767CB2B3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -822,6 +843,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D67674B924C9068A00B47CF2 /* PlaceFetcherTestCase.swift in Sources */,
+				D67674C324C9F50400B47CF2 /* TestCaseConstant.swift in Sources */,
 				D67674BE24C9179400B47CF2 /* PhotoListResponsableTestCase.swift in Sources */,
 				D67674BC24C90F3E00B47CF2 /* ExploreResponsableTestCase.swift in Sources */,
 				D67674C024C9185300B47CF2 /* PlacePhotoFetcherTestCase.swift in Sources */,

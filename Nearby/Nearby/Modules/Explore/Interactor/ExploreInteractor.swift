@@ -19,7 +19,6 @@ class ExploreInteractor {
     var placeFetcher: PlaceFetcher?
     var placePhotoFetcher: PlacePhotoFetcher?
     var cacheWorker: CacheProtocol?
-    
     init() {
         placeFetcher = FoursquarePlaceFetcher()
         placePhotoFetcher = FoursquarePlacePhotoFetcher()

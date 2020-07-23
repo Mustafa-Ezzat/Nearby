@@ -42,7 +42,8 @@ class RealmWorkerTestCase: XCTestCase {
         XCTAssertEqual(list.all().count, 0)
     }
     func test_RealmWorker_fetch_Places() {
-        let place = Place(venuId: "0c04582282944", name: "Down Town", address: "downtown 5th settlement", photo: "https://lal-storage.s3.amazonaws.com/cache.jpg")
+        let placeValue = TestCaseConstant.Place.self
+        let place = Place(venuId: placeValue.venueId, name: placeValue.name, address: placeValue.address, photo: placeValue.photoUrl)
         write(places: [place, place, place]) { [weak self] result in
             guard let self = self else { return }
             XCTAssertTrue(result)
@@ -50,7 +51,6 @@ class RealmWorkerTestCase: XCTestCase {
             XCTAssertEqual(list.all().count, 3)
         }
     }
-    
     func testPerformance_Write_Places() {
           // This is an example of a performance test case.
           self.measure {

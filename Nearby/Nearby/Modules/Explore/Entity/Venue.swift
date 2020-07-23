@@ -35,5 +35,3 @@ struct ExploreResponse: Codable {
 struct ExploreResponsable: Responsable {
     typealias Model = ExploreResponse
 }
-
-

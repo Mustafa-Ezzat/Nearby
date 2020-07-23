@@ -14,14 +14,12 @@ enum FourSquare {
     enum Explore {
         static let endPoint = "venues/explore"
         static let radiusValue = 1000
-        static let limit = 13
+        static let limitValue = 13
         static let timeout = 7
-        enum Params {
-            static let ll = "ll"
-            static let radius = "radius"
-            static let limit = "limit"
-            static let offset = "offset"
-        }
+        // Params: Nesting Violation: Types should be nested at most 1 level deep (nesting)
+        static let coordinate = "ll"
+        static let radius = "radius"
+        static let limit = "limit"
+        static let offset = "offset"
     }
 }
-

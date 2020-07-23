@@ -7,7 +7,7 @@
 //
 
 import UIKit
-fileprivate var containerView: UIView!
+private var containerView: UIView!
 extension UIViewController: ReusableView {
     static var reuseIdentifier: String {
         return String(describing: self)
@@ -36,6 +36,6 @@ extension UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
         alertController.addAction(action)
-        present(alertController, animated: true, completion: nil)
-    }    
+        present(alertController, animated: true)
+    }
 }

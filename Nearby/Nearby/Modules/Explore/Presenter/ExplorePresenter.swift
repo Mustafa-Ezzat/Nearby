@@ -17,7 +17,6 @@ protocol ExplorePresenterProtocol {
 
 class ExplorePresenter {
     weak var view: ExploreViewInput?
-    
     private func isEmptyPlaces(list: [Place]) -> Bool {
         guard list.count > 0 else {
             view?.display(error: "no places found")

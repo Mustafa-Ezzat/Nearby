@@ -23,7 +23,6 @@ class ExploreViewController: FooterLoaderViewController {
     var hasMorePlaces: Bool!
     var isRealTime: Bool!
     var offset: Int!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -94,7 +93,7 @@ extension ExploreViewController: LocationManagerUpdate {
 
 extension ExploreViewController: ExploreViewProtocol {
     func display(list: [Place]) {
-        if list.count < FourSquare.Explore.limit {
+        if list.count < FourSquare.Explore.limitValue {
             hasMorePlaces = false
         }
         // offset: fetch places starting from
