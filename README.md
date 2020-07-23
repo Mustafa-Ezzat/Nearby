@@ -1,6 +1,6 @@
 # Nearby
 
-An iOS app for displaying realtime nearby places  around you.
+App uses Foursquare API to display user’s nearby places 
 
 # Table of Contents:
 - [Problem](#problem)
