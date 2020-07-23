@@ -26,7 +26,7 @@ class FoursquarePlaceFetcher: PlaceFetcher {
               client.request(path: FourSquare.Explore.endPoint, parameter: parameter) { result in
                   switch result {
                   case let .success(data):
-                      ExploreResponsable.shared.map(data) { result in
+                    ExploreResponsable().map(data) { result in
                           switch result {
                               case .success(let response):
                                   let venuList = (response.response.groups.first?.items ?? []).map { $0.venue }
@@ -36,13 +36,7 @@ class FoursquarePlaceFetcher: PlaceFetcher {
                           }
                       }
                   case let .failure(error):
-                    switch error {
-                    case .connectionError:
-                        // try to read from cashed
-                        completionHandler(.failure(error))
-                    default:
-                        completionHandler(.failure(error))
-                    }
+                    completionHandler(.failure(error))
                   }
               }
     }

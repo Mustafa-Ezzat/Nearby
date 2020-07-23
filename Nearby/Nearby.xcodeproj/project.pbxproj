@@ -12,7 +12,6 @@
 		D65960A124C0946A005A2D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65960A024C0946A005A2D86 /* AppDelegate.swift */; };
 		D65960AA24C0946D005A2D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D65960A924C0946D005A2D86 /* Assets.xcassets */; };
 		D65960AD24C0946D005A2D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65960AB24C0946D005A2D86 /* LaunchScreen.storyboard */; };
-		D65960B824C0946D005A2D86 /* NearbyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65960B724C0946D005A2D86 /* NearbyTests.swift */; };
 		D65960C324C0946D005A2D86 /* NearbyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65960C224C0946D005A2D86 /* NearbyUITests.swift */; };
 		D65960D624C0B09B005A2D86 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65960D524C0B09B005A2D86 /* Location.swift */; };
 		D65960D824C0B0AD005A2D86 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65960D724C0B0AD005A2D86 /* Venue.swift */; };
@@ -45,6 +44,10 @@
 		D67674B324C74FD600B47CF2 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674B224C74FD600B47CF2 /* Dictionary+Extension.swift */; };
 		D67674B524C7CB1000B47CF2 /* FooterLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674B424C7CB1000B47CF2 /* FooterLoaderViewController.swift */; };
 		D67674B724C8F5CF00B47CF2 /* RealmWorkerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674B624C8F5CF00B47CF2 /* RealmWorkerTestCase.swift */; };
+		D67674B924C9068A00B47CF2 /* PlaceFetcherTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674B824C9068A00B47CF2 /* PlaceFetcherTestCase.swift */; };
+		D67674BC24C90F3E00B47CF2 /* ExploreResponsableTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674BB24C90F3E00B47CF2 /* ExploreResponsableTestCase.swift */; };
+		D67674BE24C9179400B47CF2 /* PhotoListResponsableTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674BD24C9179400B47CF2 /* PhotoListResponsableTestCase.swift */; };
+		D67674C024C9185300B47CF2 /* PlacePhotoFetcherTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67674BF24C9185300B47CF2 /* PlacePhotoFetcherTestCase.swift */; };
 		D6AD848B24C1267000AF872C /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD848824C1267000AF872C /* Responsable.swift */; };
 		D6AD848C24C1267000AF872C /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD848A24C1267000AF872C /* ReusableView.swift */; };
 		D6AD849724C126DE00AF872C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD848E24C126DE00AF872C /* UIImageView+Extension.swift */; };
@@ -97,7 +100,6 @@
 		D65960AC24C0946D005A2D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D65960AE24C0946D005A2D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D65960B324C0946D005A2D86 /* NearbyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearbyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D65960B724C0946D005A2D86 /* NearbyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyTests.swift; sourceTree = "<group>"; };
 		D65960B924C0946D005A2D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D65960BE24C0946D005A2D86 /* NearbyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearbyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65960C224C0946D005A2D86 /* NearbyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyUITests.swift; sourceTree = "<group>"; };
@@ -133,6 +135,10 @@
 		D67674B224C74FD600B47CF2 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		D67674B424C7CB1000B47CF2 /* FooterLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterLoaderViewController.swift; sourceTree = "<group>"; };
 		D67674B624C8F5CF00B47CF2 /* RealmWorkerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmWorkerTestCase.swift; sourceTree = "<group>"; };
+		D67674B824C9068A00B47CF2 /* PlaceFetcherTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFetcherTestCase.swift; sourceTree = "<group>"; };
+		D67674BB24C90F3E00B47CF2 /* ExploreResponsableTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreResponsableTestCase.swift; sourceTree = "<group>"; };
+		D67674BD24C9179400B47CF2 /* PhotoListResponsableTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListResponsableTestCase.swift; sourceTree = "<group>"; };
+		D67674BF24C9185300B47CF2 /* PlacePhotoFetcherTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePhotoFetcherTestCase.swift; sourceTree = "<group>"; };
 		D6AD848824C1267000AF872C /* Responsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responsable.swift; sourceTree = "<group>"; };
 		D6AD848A24C1267000AF872C /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D6AD848E24C126DE00AF872C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -246,9 +252,12 @@
 		D65960B624C0946D005A2D86 /* NearbyTests */ = {
 			isa = PBXGroup;
 			children = (
-				D65960B724C0946D005A2D86 /* NearbyTests.swift */,
 				D65960B924C0946D005A2D86 /* Info.plist */,
 				D67674B624C8F5CF00B47CF2 /* RealmWorkerTestCase.swift */,
+				D67674BB24C90F3E00B47CF2 /* ExploreResponsableTestCase.swift */,
+				D67674BD24C9179400B47CF2 /* PhotoListResponsableTestCase.swift */,
+				D67674B824C9068A00B47CF2 /* PlaceFetcherTestCase.swift */,
+				D67674BF24C9185300B47CF2 /* PlacePhotoFetcherTestCase.swift */,
 			);
 			path = NearbyTests;
 			sourceTree = "<group>";
@@ -812,7 +821,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D65960B824C0946D005A2D86 /* NearbyTests.swift in Sources */,
+				D67674B924C9068A00B47CF2 /* PlaceFetcherTestCase.swift in Sources */,
+				D67674BE24C9179400B47CF2 /* PhotoListResponsableTestCase.swift in Sources */,
+				D67674BC24C90F3E00B47CF2 /* ExploreResponsableTestCase.swift in Sources */,
+				D67674C024C9185300B47CF2 /* PlacePhotoFetcherTestCase.swift in Sources */,
 				D67674B724C8F5CF00B47CF2 /* RealmWorkerTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

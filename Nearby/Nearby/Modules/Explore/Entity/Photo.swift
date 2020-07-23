@@ -23,6 +23,4 @@ struct PhotoListResponse: Codable {
 }
 struct PhotoListResponsable: Responsable {
     typealias Model = PhotoListResponse
-    static let shared = PhotoListResponsable()
-    private init() {}
 }

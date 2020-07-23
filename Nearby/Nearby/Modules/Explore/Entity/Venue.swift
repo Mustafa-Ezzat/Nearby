@@ -34,8 +34,6 @@ struct ExploreResponse: Codable {
 }
 struct ExploreResponsable: Responsable {
     typealias Model = ExploreResponse
-    static let shared = ExploreResponsable()
-    private init() {}
 }
 
 
